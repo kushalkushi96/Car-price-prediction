@@ -20,3 +20,15 @@ After running the same, you will get your local host address, something like as 
 Then copy the link and open the same in your browser,now we can the output of the file.
 
 The broswerlink  opens to this.
+
+![Screenshot (11)](https://user-images.githubusercontent.com/45974916/105572220-cefd4f00-5d7b-11eb-9f2c-19b34192128c.png)
+
+Now you can predict the price of your car before reselling it.
+
+# Notebook.ipynb
+
+This python notebook has the code for the machine learning model which is trained using the data provided in "data.csv", the model is then dumped using pickle and further used to predict values using Flask. The accuracy of the model is 87% which can be increased with hyper parameter optimization or with the help of more data. I have used pickle to dump the model to further use it for deployment.
+
+# Heroku
+
+I have used Heroku cloud services to deploy the same and the link for the same can be found here:
