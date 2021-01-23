@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <title>Home</title>
+</head>
+
+<nav class="navbar navbar-dark bg-dark navbar-fixed-top">
+    <a class="navbar-brand" href="#">car price prediction</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+            <li class="nav-item active">
+                <a class="nav-link" href="/">Home</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/about">About</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+<body>
+    
+    <div class="container-fluid">
+        <div class="col-lg-12">
+                <form action="{{ url_for('predict') }}" method="post">
+                    <br>
+                    <br>
+                    <div class="card-body">
+                <form action="{{ url_for('predict')}}" method="post">
+
+                    <div class="form-group">
+                        <label>Manufacturing Year</label>
+                        <input id="first" class="form-control" name="Year" placeholder="Enter year" type="number ">
+                    </div> 
+                    
+                    <div class="form-group">
+                        <label>Showroom Price</label>
+                        <input id="second" class="form-control" name="Present_Price" placeholder="Enter Price in Lakhs" required="required">
+                    </div>
+
+                    <div class="form-group">
+                        <label>Kilometers Driven</label>
+                        <input id="third" name="Kms_Driven" class="form-control" placeholder="Enter Kilometers driven by car" required="required">
+                    </div>
+
+                    <div class="form-group">
+                        <label>How many owners the car had?</label>
+                        <select name="Owner" id="fourth" class="form-control" required="required">
+                            <option value="0">0</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                        </select>
+
+                    </div>
+
+                    <div class="form-group">
+                        <label>Dealer or Individual?</label>
+                        <select name="Seller_Type_Individual" id="resea" class="form-control" required="required">
+                            <option value="Dealer">Dealer</option>
+                            <option value="Individual">Individual</option>
+                        </select>
+                    </div>
+
+                    <div class="row">
+                        
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label>Fuel type</label>
+                                <select name="Fuel_Type_Petrol" id="fuel" required="required" class="form-control">
+                                    <option value="Petrol">Petrol</option>
+                                    <option value="Diesel">Diesel</option>
+                                    <option value="Diesel">CNG</option>
+                                </select>
+                            </div> 
+                        </div>
+
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label>Transmission type</label>
+                                <select name="Transmission_Mannual" id="research" class="form-control" required="required">
+                                     <option value="Mannual">Manual Car</option>
+                                     <option value="Automatic">Automatic Car</option>
+                                </select>
+                            </div>
+                        </div>
+
+                    </div>
+                        
+                        <br>
+                        <br>
+                        <center>
+                            <button type="submit" class="btn btn-dark" value="submit">Submit</button>
+                        </center>
+                </form>
+            </div>
+                           <h3 class="predict">{{ prediction_text }}<h3>
+        </div>
+        <!-- Optional JavaScript -->
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
+<style>
+body {
+    background-color: #626269;
+} 
+
+.col-lg-4 {
+    color: #ffffff;
+}
+</style>
+
+</html>
+
+ -
