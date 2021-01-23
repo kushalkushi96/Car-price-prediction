@@ -10,6 +10,9 @@ For Required package/module installation, open the terminal and copy paste below
 - pip install requirements.txt
 
 # To Execute the code:
+
+Use the ipynb file in jupyter notebook excute the code and next 
+
 Run the command in your terminal or command prompt.
 
 - python app.py
