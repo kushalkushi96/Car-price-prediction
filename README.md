@@ -29,3 +29,8 @@ Now you can predict the price of your car before reselling it.
 # Heroku
 
 I have used Heroku cloud services to deploy the same and the link for the same can be found here:
+
+https://carprize-prediction.herokuapp.com/
+
+
+Do star the repository, also any suggestions and changes are most welcome.
